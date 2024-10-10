@@ -24,4 +24,4 @@ streamlit.write(model.evaluate(X_test, y_test))
 # Summary Model
 streamlit.write(model.summary())
 
-streamlit.write("Test")
+streamlit.write("Testing")
