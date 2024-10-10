@@ -32,7 +32,4 @@ streamlit.write(model.evaluate(X, y))
 model.summary()
 streamlit.write(model.summary())
 
-model.write_rules()
-streamlit.write(model.write_rules())
-
 streamlit.write("Testing")
