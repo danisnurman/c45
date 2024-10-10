@@ -6,23 +6,23 @@ from C45 import C45Classifier
 
 data = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
 streamlit.write(data)
-X = data.drop(['Diabetes_binary'], axis=1)
-y = data['Diabetes_binary']
+# X = data.drop(['Diabetes_binary'], axis=1)
+# y = data['Diabetes_binary']
 
-model = C45Classifier()
-model.fit(X, y)
+# model = C45Classifier()
+# model.fit(X, y)
 
-# Predict
-data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
-model.predict(data_test)
+# # Predict
+# data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
+# model.predict(data_test)
 
-# Evaluate
-data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
-X_test = data_test.drop(['Diabetes_binary'], axis=1)
-y_test = data_test['Diabetes_binary']
-streamlit.write(model.evaluate(X_test, y_test))
+# # Evaluate
+# data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
+# X_test = data_test.drop(['Diabetes_binary'], axis=1)
+# y_test = data_test['Diabetes_binary']
+# streamlit.write(model.evaluate(X_test, y_test))
 
-# Summary Model
-streamlit.write(model.summary())
+# # Summary Model
+# streamlit.write(model.summary())
 
 streamlit.write("Testing")
