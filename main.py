@@ -19,7 +19,7 @@ model.fit(X, y)
 
 # Predict
 # data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
-model.predict(data)
+model.predict(X)
 
 # Evaluate
 # data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
