@@ -26,9 +26,13 @@ model.predict(X)
 # X_test = data_test.drop(['Diabetes_binary'], axis=1)
 # y_test = data_test['Diabetes_binary']
 model.evaluate(X, y)
+streamlit.write(model.evaluate(X, y))
 
 # # Summary Model
 model.summary()
 streamlit.write(model.summary())
+
+model.write_rules()
+streamlit.write(model.write_rules())
 
 streamlit.write("Testing")
