@@ -5,11 +5,14 @@ import pandas as pd
 from C45 import C45Classifier
 
 data = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
+data.dropna(inplace=True)
+data.isnull().sum()
+
 feature_cols = ['Diabetes_binary', 'GenHlth', 'Age', 'BMI', 'HighBP', 'HighChol', 'DiffWalk']
 data = data[feature_cols]
 X = data.drop(columns='Diabetes_binary')
 y = data.Diabetes_binary
-streamlit.write(feature_cols)
+# streamlit.write(feature_cols)
 
 model = C45Classifier()
 model.fit(X, y)
