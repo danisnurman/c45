@@ -12,7 +12,7 @@ feature_cols = ['Diabetes_binary', 'GenHlth', 'Age', 'BMI', 'HighBP', 'HighChol'
 data = data[feature_cols]
 X = data.drop(columns='Diabetes_binary')
 y = data.Diabetes_binary
-# streamlit.write(feature_cols)
+streamlit.write(feature_cols)
 
 model = C45Classifier()
 model.fit(X, y)
