@@ -5,6 +5,7 @@ import pandas as pd
 from C45 import C45Classifier
 
 data = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
+streamlit.write(data)
 X = data.drop(['Diabetes_binary'], axis=1)
 y = data['Diabetes_binary']
 
