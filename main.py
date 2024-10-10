@@ -19,7 +19,7 @@ model.predict(data_test)
 data_test = pd.read_csv('data_test.csv')
 X_test = data_test.drop(['target'], axis=1)
 y_test = data_test['target']
-model.evaluate(X_test, y_test)
+streamlit.write(model.evaluate(X_test, y_test))
 
 # Summary Model
-model.summary()
+streamlit.write(model.summary())
