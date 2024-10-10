@@ -5,8 +5,8 @@ import pandas as pd
 from C45 import C45Classifier
 
 data = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
-X = data.drop(['target'], axis=1)
-y = data['target']
+X = data.drop(['Diabetes_binary'], axis=1)
+y = data['Diabetes_binary']
 
 model = C45Classifier()
 model.fit(X, y)
@@ -16,9 +16,9 @@ data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/ma
 model.predict(data_test)
 
 # Evaluate
-data_test = pd.read_csv('data_test.csv')
-X_test = data_test.drop(['target'], axis=1)
-y_test = data_test['target']
+data_test = pd.read_csv('https://raw.githubusercontent.com/danisnurman/psbnd2/main/diabetes_binary_5050split_health_indicators_BRFSS2015.csv')
+X_test = data_test.drop(['Diabetes_binary'], axis=1)
+y_test = data_test['Diabetes_binary']
 streamlit.write(model.evaluate(X_test, y_test))
 
 # Summary Model
